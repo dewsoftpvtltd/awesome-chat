@@ -1,7 +1,19 @@
 doctype html
 html
-  head
+  block head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript', src='/javascripts/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/chat.js')
   body
+    header#banner
+      h1 Awesome Chat
     block content
+    footer Hope you enjoy your stay here
+    section#nameform.modal
+       div.backdrop
+       div.popup
+         div.pophead Please enter a nickname
+         div.popbody
+           input#nickname(type='text')
+           input#setname(type='button', value='Set Name')
